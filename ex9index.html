@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+          "header header"
+          "intro hero"
+          "features features"
+          "more call"
+          "footer footer";
+        gap: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .item {
+        padding: 20px;
+        color: #fff;
+        font-size: 1.2em;
+      }
+
+      .header {
+        grid-area: header;
+        background-color: #57eae0;
+      }
+      .intro {
+        grid-area: intro;
+        background-color: #3fe9ec;
+      }
+      .hero {
+        grid-area: hero;
+        background-color: #62e1f5;
+      }
+      .cta1 {
+        grid-area: hero;
+        align-self: end;
+        justify-self: end;
+        background-color: #acf44d;
+      }
+      .features {
+        grid-area: features;
+        background-color: #53dfe7;
+      }
+      .more {
+        grid-area: more;
+        background-color: #54d2eb;
+      }
+      .cta2 {
+        grid-area: call;
+        background-color: #b2f244;
+      }
+      .footer {
+        grid-area: footer;
+        background-color: #6fd0e8;
+      }
+
+      .cta1,
+      .cta2 {
+        color: #000;
+        font-weight: bold;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "header"
+            "intro"
+            "hero"
+            "features"
+            "more"
+            "call"
+            "footer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item header">Header</div>
+      <div class="item intro">Intro Copy</div>
+      <div class="item hero">Hero Image</div>
+      <div class="item cta1">Call to Action</div>
+      <div class="item features">Features</div>
+      <div class="item more">More Copy</div>
+      <div class="item cta2">Call to Action</div>
+      <div class="item footer">Footer</div>
+    </div>
+  </body>
+</html>

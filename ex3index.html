@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Layout Structure</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      header,
+      nav,
+      main,
+      section,
+      aside,
+      footer {
+        padding: 20px;
+        margin: 5px;
+        background-color: #d3d3d3;
+        border: 1px solid #000;
+        text-align: center;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        gap: 5px;
+      }
+      .main-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 5px;
+      }
+      .vertical-aside {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>&lt;header&gt;</header>
+    <nav>&lt;nav&gt;</nav>
+    <div class="main-layout">
+      <main>&lt;main&gt;</main>
+      <div class="vertical-aside">
+        <aside>&lt;aside&gt;</aside>
+        <section>&lt;section&gt;</section>
+      </div>
+    </div>
+    <aside>&lt;aside&gt;</aside>
+    <footer>&lt;footer&gt;</footer>
+  </body>
+</html>

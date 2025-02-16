@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      header,
+      nav,
+      section,
+      article,
+      aside,
+      footer {
+        border: 2px solid #333;
+        margin: 5px;
+        padding: 20px;
+        text-align: center;
+      }
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header"
+          "nav"
+          "main"
+          "footer";
+      }
+      header {
+        grid-area: header;
+        background-color: #f2f2f2;
+      }
+      nav {
+        grid-area: nav;
+        background-color: #e6e6e6;
+      }
+      .main-content {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 5px;
+      }
+      section {
+        background-color: #d9f2d9;
+      }
+      article {
+        background-color: #d0e0f5;
+      }
+      aside {
+        background-color: #f7dada;
+      }
+      footer {
+        grid-area: footer;
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Header</h1>
+      </header>
+      <nav>
+        <p>Navigation Bar</p>
+      </nav>
+      <div class="main-content">
+        <div>
+          <section>
+            <h2>Section</h2>
+          </section>
+          <article>
+            <h2>Article</h2>
+          </article>
+        </div>
+        <aside>
+          <h2>Aside</h2>
+        </aside>
+      </div>
+      <footer>
+        <p>Footer</p>
+      </footer>
+    </div>
+  </body>
+</html>

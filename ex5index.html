@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Layout</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: grid;
+        grid-template-areas:
+          "title title"
+          "nav nav"
+          "intro intro"
+          "main sidebar"
+          "footer footer";
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 60px 40px 50px 300px 60px;
+        gap: 10px;
+        height: 100vh;
+        background-color: #ccc;
+        padding: 10px;
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2em;
+      }
+
+      .title {
+        grid-area: title;
+        background-color: #333;
+      }
+      .nav {
+        grid-area: nav;
+        background-color: #555;
+      }
+      .intro {
+        grid-area: intro;
+        background-color: #666;
+      }
+      .main {
+        grid-area: main;
+        background-color: #000;
+      }
+      .sidebar {
+        grid-area: sidebar;
+        background-color: #888;
+      }
+      .footer {
+        grid-area: footer;
+        background-color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item title">Page Title</div>
+      <div class="item nav">Navigation</div>
+      <div class="item intro">Introduction</div>
+      <div class="item main">Main Content Area</div>
+      <div class="item sidebar">Sidebar</div>
+      <div class="item footer">Footer</div>
+    </div>
+  </body>
+</html>

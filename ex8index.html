@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Left Panel Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .header {
+        background-color: pink;
+        text-align: center;
+        padding: 20px;
+        font-weight: bold;
+      }
+      .nav {
+        background-color: purple;
+        text-align: center;
+        padding: 15px;
+        color: white;
+      }
+      .main {
+        display: flex;
+        height: 300px;
+      }
+      .left-panel {
+        background-color: lightpink;
+        width: 30%;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .content {
+        background-color: white;
+        width: 70%;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .footer {
+        background-color: lightpurple;
+        text-align: center;
+        padding: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">Header</div>
+    <div class="nav">Navigation Bar</div>
+    <div class="main">
+      <div class="left-panel">Left Panel</div>
+      <div class="content">Main Content</div>
+    </div>
+    <div class="footer">Footer</div>
+  </body>
+</html>

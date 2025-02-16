@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Structure</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "menu main right"
+          "footer footer footer";
+        grid-template-rows: 100px 200px 100px;
+        grid-template-columns: 1fr 2fr 1fr;
+        height: 100vh;
+        gap: 10px;
+        padding: 20px;
+        background-color: #e6f7ff;
+      }
+      .header {
+        grid-area: header;
+        background-color: #66c2ff;
+        text-align: center;
+        padding: 20px;
+        border: 3px solid #006699;
+      }
+      .menu {
+        grid-area: menu;
+        background-color: #99d6ff;
+        text-align: center;
+        padding: 20px;
+        border: 3px solid #006699;
+      }
+      .main {
+        grid-area: main;
+        background-color: #b3e0ff;
+        text-align: center;
+        padding: 20px;
+        border: 3px solid #006699;
+      }
+      .right {
+        grid-area: right;
+        background-color: #99d6ff;
+        text-align: center;
+        padding: 20px;
+        border: 3px solid #006699;
+      }
+      .footer {
+        grid-area: footer;
+        background-color: #66c2ff;
+        text-align: center;
+        padding: 20px;
+        border: 3px solid #006699;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Header</div>
+      <div class="menu">Menu</div>
+      <div class="main">Main</div>
+      <div class="right">Right</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
