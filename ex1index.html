@@ -6,85 +6,90 @@
     <title>Semantic Layout</title>
     <style>
       * {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
+
       body {
         font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
       }
-      header,
-      nav,
-      section,
-      article,
-      aside,
-      footer {
-        border: 2px solid #333;
-        margin: 5px;
-        padding: 20px;
-        text-align: center;
-      }
+
       .container {
         display: grid;
         grid-template-areas:
           "header"
           "nav"
-          "main"
+          "content"
           "footer";
+        width: 300px;
+        border: 2px solid black;
+        background: white;
       }
+
       header {
         grid-area: header;
-        background-color: #f2f2f2;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 2px solid black;
       }
+
       nav {
         grid-area: nav;
-        background-color: #e6e6e6;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 2px solid black;
       }
-      .main-content {
-        grid-area: main;
+
+      .content {
+        grid-area: content;
         display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 5px;
+        grid-template-rows: auto auto;
+        border-bottom: 2px solid black;
       }
+
       section {
-        background-color: #d9f2d9;
+        grid-column: 1;
+        padding: 10px;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
       }
+
       article {
-        background-color: #d0e0f5;
+        grid-column: 1;
+        padding: 10px;
       }
+
       aside {
-        background-color: #f7dada;
+        grid-column: 2;
+        grid-row: span 2;
+        padding: 10px;
+        border-left: 2px solid black;
       }
+
       footer {
         grid-area: footer;
-        background-color: #f2f2f2;
+        text-align: center;
+        padding: 10px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1>Header</h1>
-      </header>
-      <nav>
-        <p>Navigation Bar</p>
-      </nav>
-      <div class="main-content">
-        <div>
-          <section>
-            <h2>Section</h2>
-          </section>
-          <article>
-            <h2>Article</h2>
-          </article>
-        </div>
-        <aside>
-          <h2>Aside</h2>
-        </aside>
+      <header>&lt;header&gt;</header>
+      <nav>&lt;nav&gt;</nav>
+      <div class="content">
+        <section>&lt;section&gt;</section>
+        <aside>&lt;aside&gt;</aside>
+        <article>&lt;article&gt;</article>
       </div>
-      <footer>
-        <p>Footer</p>
-      </footer>
+      <footer>&lt;footer&gt;</footer>
     </div>
   </body>
 </html>
