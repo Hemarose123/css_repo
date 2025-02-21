@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header"
+          "nav"
+          "content"
+          "footer";
+        width: 400px;
+        border: 2px solid black;
+        background: white;
+        text-align: center;
+      }
+
+      header {
+        grid-area: header;
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        font-weight: bold;
+      }
+
+      nav {
+        grid-area: nav;
+        background-color: #555;
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .content {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 10px;
+      }
+
+      .main-content {
+        background-color: #ddd;
+        padding: 20px;
+      }
+
+      .sidebar {
+        background-color: #bbb;
+        padding: 20px;
+      }
+
+      footer {
+        grid-area: footer;
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <nav>Navigation</nav>
+      <div class="content">
+        <div class="main-content">Main Content</div>
+        <div class="sidebar">Sidebar</div>
+      </div>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
