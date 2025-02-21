@@ -3,61 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Left Panel Layout</title>
+    <title>Web Layout</title>
     <style>
       * {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
+
       body {
-        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
       }
-      .header {
+
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "nav nav"
+          "sidebar main"
+          "footer footer";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto 1fr auto;
+        width: 400px;
+        border: 2px solid black;
+        background: white;
+      }
+
+      header {
+        grid-area: header;
         background-color: pink;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         font-weight: bold;
       }
-      .nav {
+
+      nav {
+        grid-area: nav;
         background-color: purple;
-        text-align: center;
-        padding: 15px;
         color: white;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
       }
-      .main {
-        display: flex;
-        height: 300px;
-      }
-      .left-panel {
+
+      .sidebar {
+        grid-area: sidebar;
         background-color: lightpink;
-        width: 30%;
-        padding: 20px;
         text-align: center;
+        padding: 20px;
         font-weight: bold;
       }
-      .content {
+
+      .main-content {
+        grid-area: main;
         background-color: white;
-        width: 70%;
-        padding: 20px;
         text-align: center;
+        padding: 20px;
         font-weight: bold;
       }
-      .footer {
-        background-color: lightpurple;
+
+      footer {
+        grid-area: footer;
+        background-color: plum;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         font-weight: bold;
       }
     </style>
   </head>
   <body>
-    <div class="header">Header</div>
-    <div class="nav">Navigation Bar</div>
-    <div class="main">
-      <div class="left-panel">Left Panel</div>
-      <div class="content">Main Content</div>
+    <div class="container">
+      <header>Header</header>
+      <nav>Navigation Bar</nav>
+      <div class="sidebar">Left Panel</div>
+      <div class="main-content">Main Content</div>
+      <footer>Footer</footer>
     </div>
-    <div class="footer">Footer</div>
   </body>
 </html>
