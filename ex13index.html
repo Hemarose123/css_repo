@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        padding-bottom: 20px;
+      }
+
+      header {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+
+      .slideshow {
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        padding: 50px 20px;
+        margin-top: 5px;
+        font-size: 1.3rem;
+      }
+
+      .three-columns {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        background-color: #666;
+        margin-top: 5px;
+        padding: 20px;
+      }
+
+      .column {
+        background-color: #fff;
+        width: 30%;
+        min-height: 150px;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+
+      <nav>Navigation Bar</nav>
+
+      <div class="slideshow">Slideshow</div>
+
+      <section class="three-columns">
+        <div class="column">Box 1</div>
+        <div class="column">Box 2</div>
+        <div class="column">Box 3</div>
+      </section>
+
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
